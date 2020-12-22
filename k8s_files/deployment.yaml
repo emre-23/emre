@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: main
-        image: main
+        image: 23emre/main:allishere
         ports:
         - hostPort: 11130
           containerPort: 11130
