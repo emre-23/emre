@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: main
+  name: main-deployment
 spec:
   selector:
     matchLabels:
@@ -23,5 +23,4 @@ spec:
       - name: main
         image: 23emre/main:allishere
         ports:
-        - hostPort: 11130
-          containerPort: 11130
+        - containerPort: 11130

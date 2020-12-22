@@ -3,12 +3,10 @@ kind: Service
 metadata:
   labels:
     app: main
-  name: main
+  name: main-service
 spec:
   selector:
     app: main
   ports:
-  - protocol: TCP
-    port: 11130
+  - port: 11130
     targetPort: 11130
-  type: ClusterIP
