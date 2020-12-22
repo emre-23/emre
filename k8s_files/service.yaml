@@ -6,7 +6,7 @@ metadata:
   name: main
 spec:
   selector:
-    app: goserver
+    app: main
   ports:
   - protocol: TCP
     port: 11130
