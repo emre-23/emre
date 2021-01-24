@@ -1,0 +1,20 @@
+replicaCount: 1
+
+image:
+  repository: 23emre/main
+  tag: allishere
+  pullPolicy: IfNotPresent
+
+service:
+  name: go-app
+  type: NodePort
+  externalPort: 11130
+  internalPort: 11130
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
