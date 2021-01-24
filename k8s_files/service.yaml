@@ -5,6 +5,7 @@ metadata:
     app: main
   name: main-service
 spec:
+  type: LoadBalancer
   selector:
     app: main
   ports:
