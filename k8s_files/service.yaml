@@ -9,5 +9,5 @@ spec:
   selector:
     app: main
   ports:
-  - port: 80
-    targetPort: 80
+  - port: 11130
+    targetPort: 11130
