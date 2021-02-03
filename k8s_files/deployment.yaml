@@ -21,6 +21,6 @@ spec:
     spec:
       containers:
       - name: main
-        image: 23emre/main:allishere
+        image: 23emre/main:latest
         ports:
         - containerPort: 80
