@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: main
-  replicas: 2
+  replicas: 4
   revisionHistoryLimit: 0
   progressDeadlineSeconds: 30
   strategy:
@@ -19,6 +19,16 @@ spec:
       labels:
         app: main
     spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - main
+            topologyKey: "kubernetes.io/hostname"
       containers:
       - name: main
         image: 23emre/main:latest
